@@ -9,105 +9,91 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
-    /* 🔵 PROFESSIONAL BLUE BACKGROUND + SOFT WHITE OVERLAY */
+    /* 🔵 BACKGROUND IMAGE WITH BLUR + DARK OVERLAY */
     body {
-      background: url("https://oneononeexperts.site/wp-content/uploads/2025/12/Crowd-At-MCG-Cricket-Ground-Australia-For-India-vs-Pakistan-T20-World-Cup-Match-2022.jpg")
-                  no-repeat center/cover;
       position: relative;
-      color:#111;
-      text-align:center;
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      padding:20px 15px;
+      min-height: 100vh;
+      text-align: center;
+      color: #fff;
+      padding: 20px 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
     }
 
-    /* White transparent overlay for readability */
+    /* Actual Background Image */
     body::before {
-      content:"";
-      position:absolute;
-      top:0; left:0;
-      width:100%; height:100%;
-      background:rgba(255,255,255,0.78);
-      backdrop-filter: blur(2px);
-      z-index:-1;
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("https://oneononeexperts.site/wp-content/uploads/2025/12/Crowd-At-MCG-Cricket-Ground-Australia-For-India-vs-Pakistan-T20-World-Cup-Match-2022.jpg")
+                no-repeat center/cover;
+      filter: blur(10px) brightness(0.45);
+      z-index: -2;
     }
 
-    h1 { color:#0077ff; font-size:22px; margin-top:35px; text-transform:uppercase; font-weight:600; }
-    p { font-size:15px; margin:8px 0; font-weight:500; }
-    .timer { font-size:18px; margin-top:10px; font-weight:bold; color:#ff6600; }
+    /* Subtle overlay to boost visibility */
+    body::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      z-index: -1;
+    }
+
+    h1 { color:#ffffff; font-size:22px; margin-top:35px; font-weight:600; text-transform:uppercase; }
+    p { font-size:15px; margin:8px 0; font-weight:400; opacity:0.95; }
+    .timer { font-size:18px; margin-top:10px; font-weight:bold; color:#ffcc00; }
 
     .profile img {
       width:160px;
       border-radius:50%;
       margin:18px 0;
-      border:3px solid #0077ff;
-      box-shadow:0 0 15px rgba(0,119,255,0.3);
+      border:3px solid #ffffff;
+      box-shadow:0 0 20px rgba(255,255,255,0.5);
     }
 
     .view-btn {
       display:inline-block;
       padding:12px 28px;
-      background:linear-gradient(45deg,#0077ff,#00c6ff);
+      background:linear-gradient(45deg,#00c6ff,#0077ff);
       color:#fff;
       border-radius:30px;
       text-decoration:none;
       font-weight:600;
-      transition:0.3s;
       margin-top:10px;
+      transition:0.3s;
     }
-    .view-btn:hover { transform:scale(1.05); box-shadow:0 4px 12px rgba(0,119,255,0.4); }
+    .view-btn:hover { transform:scale(1.06); box-shadow:0 4px 15px rgba(0,0,0,0.4); }
 
-    h2 { color:#0077ff; margin-top:8px; font-size:18px; font-weight:600; }
-    .footer { font-size:13px; margin-top:15px; opacity:0.8; }
+    h2 { color:#ffffff; margin-top:8px; font-size:18px; font-weight:600; }
 
+    .footer { font-size:13px; margin-top:15px; opacity:0.9; }
+
+    /* Lower Disclaimer Box */
     .disclaimer {
-      background:#f7f7f7;
-      color:#555;
+      background:rgba(255,255,255,0.15);
+      color:#fff;
       font-size:12px;
-      text-align:center;
-      padding:8px 10px 6px;
-      border-top:1px solid #ddd;
-      margin-top:15px;
-      line-height:1.4;
+      padding:10px;
       border-radius:8px 8px 0 0;
+      backdrop-filter: blur(4px);
     }
-
-    .disclaimer strong { color:#222; }
 
     .footer-links {
       font-size:13px;
       display:flex;
       justify-content:center;
-      align-items:center;
-      gap:4px;
-      padding:5px 0 10px;
-      background:#f7f7f7;
+      gap:8px;
+      padding:10px;
+      background:rgba(255,255,255,0.15);
       border-radius:0 0 8px 8px;
+      backdrop-filter: blur(4px);
     }
 
-    .footer-links a { color:#0077ff; text-decoration:none; }
-    .footer-links span { color:#0077ff; font-weight:500; }
+    .footer-links a { color:#ffcc00; text-decoration:none; }
   </style>
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1402713628028891');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1402713628028891&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 
 </head>
 
