@@ -9,50 +9,82 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
-    /* 🔵 BLUE BACKGROUND IMAGE ADDED */
-    body { 
-      background: url("") 
+    /* 🔵 PROFESSIONAL BLUE BACKGROUND + SOFT WHITE OVERLAY */
+    body {
+      background: url("https://oneononeexperts.site/wp-content/uploads/2025/12/Crowd-At-MCG-Cricket-Ground-Australia-For-India-vs-Pakistan-T20-World-Cup-Match-2022.jpg")
                   no-repeat center/cover;
-      color:#111; 
-      text-align:center; 
-      min-height:100vh; 
-      display:flex; 
-      flex-direction:column; 
-      justify-content:space-between; 
-      padding:20px 15px; 
+      position: relative;
+      color:#111;
+      text-align:center;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      padding:20px 15px;
     }
 
-    h1 { color:#0077ff; font-size:22px; margin-top:35px; text-transform:uppercase; }
-    p { font-size:15px; margin:8px 0; }
+    /* White transparent overlay for readability */
+    body::before {
+      content:"";
+      position:absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      background:rgba(255,255,255,0.78);
+      backdrop-filter: blur(2px);
+      z-index:-1;
+    }
+
+    h1 { color:#0077ff; font-size:22px; margin-top:35px; text-transform:uppercase; font-weight:600; }
+    p { font-size:15px; margin:8px 0; font-weight:500; }
     .timer { font-size:18px; margin-top:10px; font-weight:bold; color:#ff6600; }
 
     .profile img {
-      width:160px; border-radius:50%; margin:18px 0; border:3px solid #0077ff;
+      width:160px;
+      border-radius:50%;
+      margin:18px 0;
+      border:3px solid #0077ff;
       box-shadow:0 0 15px rgba(0,119,255,0.3);
     }
 
     .view-btn {
-      display:inline-block; padding:12px 28px; 
+      display:inline-block;
+      padding:12px 28px;
       background:linear-gradient(45deg,#0077ff,#00c6ff);
-      color:#fff; border-radius:30px; text-decoration:none; 
-      font-weight:600; transition:0.3s; margin-top:10px;
+      color:#fff;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+      margin-top:10px;
     }
     .view-btn:hover { transform:scale(1.05); box-shadow:0 4px 12px rgba(0,119,255,0.4); }
 
-    h2 { color:#0077ff; margin-top:8px; font-size:18px; }
+    h2 { color:#0077ff; margin-top:8px; font-size:18px; font-weight:600; }
     .footer { font-size:13px; margin-top:15px; opacity:0.8; }
 
     .disclaimer {
-      background:#f7f7f7; color:#555; font-size:12px; text-align:center; 
-      padding:8px 10px 6px; border-top:1px solid #ddd; 
-      margin-top:15px; line-height:1.4; border-radius:8px 8px 0 0;
+      background:#f7f7f7;
+      color:#555;
+      font-size:12px;
+      text-align:center;
+      padding:8px 10px 6px;
+      border-top:1px solid #ddd;
+      margin-top:15px;
+      line-height:1.4;
+      border-radius:8px 8px 0 0;
     }
 
     .disclaimer strong { color:#222; }
 
     .footer-links {
-      font-size:13px; display:flex; justify-content:center; align-items:center; 
-      gap:4px; padding:5px 0 10px; background:#f7f7f7; border-radius:0 0 8px 8px;
+      font-size:13px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:4px;
+      padding:5px 0 10px;
+      background:#f7f7f7;
+      border-radius:0 0 8px 8px;
     }
 
     .footer-links a { color:#0077ff; text-decoration:none; }
