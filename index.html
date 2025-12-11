@@ -9,7 +9,7 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
-    /* 🔵 BACKGROUND IMAGE WITH BLUR + DARK OVERLAY */
+    /* 🔵 LIGHT BLUR BACKGROUND + CLEAR VISIBILITY */
     body {
       position: relative;
       min-height: 100vh;
@@ -22,23 +22,23 @@
       overflow: hidden;
     }
 
-    /* Actual Background Image */
+    /* Background Image with LIGHT BLUR */
     body::before {
       content: "";
       position: absolute;
       inset: 0;
       background: url("https://oneononeexperts.site/wp-content/uploads/2025/12/Crowd-At-MCG-Cricket-Ground-Australia-For-India-vs-Pakistan-T20-World-Cup-Match-2022.jpg")
                 no-repeat center/cover;
-      filter: blur(10px) brightness(0.45);
+      filter: blur(4px) brightness(0.70); /* ⭐ Blur reduced + visibility increased */
       z-index: -2;
     }
 
-    /* Subtle overlay to boost visibility */
+    /* Slight overlay for text clarity */
     body::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.35);
+      background: rgba(0, 0, 0, 0.25); /* ⭐ Lighter overlay */
       z-index: -1;
     }
 
@@ -73,12 +73,12 @@
 
     /* Lower Disclaimer Box */
     .disclaimer {
-      background:rgba(255,255,255,0.15);
+      background:rgba(255,255,255,0.12);
       color:#fff;
       font-size:12px;
       padding:10px;
       border-radius:8px 8px 0 0;
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(3px);
     }
 
     .footer-links {
@@ -87,9 +87,9 @@
       justify-content:center;
       gap:8px;
       padding:10px;
-      background:rgba(255,255,255,0.15);
+      background:rgba(255,255,255,0.12);
       border-radius:0 0 8px 8px;
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(3px);
     }
 
     .footer-links a { color:#ffcc00; text-decoration:none; }
